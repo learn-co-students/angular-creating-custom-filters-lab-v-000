@@ -1,8 +1,8 @@
 function City(){
-  return function(contact, cityName){
-    if (contact.location.city == cityName){
-      return contact;
-    };
+  return function(contacts, cityName){
+    return contacts.filter(function (contact){
+      return contact.location.city == cityName;
+    });
   };
 }
 
