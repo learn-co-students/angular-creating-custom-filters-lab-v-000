@@ -57,10 +57,10 @@
                     </tr>
                 </thead>
                 <tr ng-repeat="contact in ctrl.contacts">
-                    <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
-                    <td>{{ contact.name.title}}</td>
-                    <td>{{ contact.name.first}}</td>
-                    <td>{{ contact.name.last}}</td>
+                    <td><img ng-src="{{ contact.picture.thumbnail | city}}" /></td>
+                    <td>{{ contact.name.title | upperFirstLetter}}</td>
+                    <td>{{ contact.name.first | upperFirstLetter}}</td>
+                    <td>{{ contact.name.last | upperFirstLetter}}</td>
                     <td>{{ contact.email }}</td>
                     <td>{{ contact.dob }}</td>
                     <td>{{ contact.phone }}</td>
