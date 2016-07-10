@@ -42,38 +42,42 @@
 </head>
 <body>
 
-    <div ng-app="app" class="app">
-        <div ng-controller="ContactController as ctrl">
-            <table>
-                <thead>
-                    <tr>
-                        <td>Picture</td>
-                        <td>Title</td>
-                        <td>First Name</td>
-                        <td>Last Name</td>
-                        <td>Email</td>
-                        <td>Date of Birth</td>
-                        <td>Phone</td>
-                    </tr>
-                </thead>
-                <tr ng-repeat="contact in ctrl.contacts | city:'portsmouth'">
-                    <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
-                    <td>{{ contact.name.title | upperFirstLetter }}</td>
-                    <td>{{ contact.name.first | upperFirstLetter }}</td>
-                    <td>{{ contact.name.last | upperFirstLetter }}</td>
-                    <td>{{ contact.email }}</td>
-                    <td>{{ contact.dob | date : 'shortDate' }}</td>
-                    <td>{{ contact.phone }}</td>
-                </tr>
-            </table>
-        </div>
+  <div ng-app="app" class="app">
+    <div ng-controller="ContactController as ctrl">
+      <div class="search">
+        Filter the Contacts by City:      
+        <input type="text" ng-model="search" />  
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <td>Picture</td>
+            <td>Title</td>
+            <td>First Name</td>
+            <td>Last Name</td>
+            <td>Email</td>
+            <td>Date of Birth</td>
+            <td>Phone</td>
+          </tr>
+        </thead>
+        <tr ng-repeat="contact in ctrl.contacts | city : search">
+          <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
+          <td>{{ contact.name.title | upperFirstLetter }}</td>
+          <td>{{ contact.name.first | upperFirstLetter }}</td>
+          <td>{{ contact.name.last | upperFirstLetter }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.dob | date : 'shortDate' }}</td>
+          <td>{{ contact.phone }}</td>
+        </tr>
+    </table>
     </div>
+  </div>
 
-    <script src="js/angular.js"></script>
-    <script src="js/app/app.js"></script>
-    <script src="js/app/controllers/ContactController.js"></script>
-    <script src="js/app/filters/City.js"></script>
-    <script src="js/app/filters/UpperFirstLetter.js"></script>
+  <script src="js/angular.js"></script>
+  <script src="js/app/app.js"></script>
+  <script src="js/app/controllers/ContactController.js"></script>
+  <script src="js/app/filters/City.js"></script>
+  <script src="js/app/filters/UpperFirstLetter.js"></script>
 
 </body>
 </html>
