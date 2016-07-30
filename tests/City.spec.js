@@ -24,7 +24,7 @@ describe('City Filter', function () {
              city: 'Chicago'
            }
        }];
-
+       debugger
         var results = $filter('city')(mockedList, 'Chicago');
 
         expect(results.length).toBe(1);
