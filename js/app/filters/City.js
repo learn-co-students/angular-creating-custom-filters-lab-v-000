@@ -1,6 +1,6 @@
-function City() {
-  return function(array, city){
-    array.forEach(function(index) {
+function city() {
+    return function(array, city){
+      return array.filter(function(index) {
       return index.location.city === city
     })
   }
@@ -8,4 +8,4 @@ function City() {
 
 angular
   .module('app')
-  .filter('City', City)
+  .filter('city', city)
