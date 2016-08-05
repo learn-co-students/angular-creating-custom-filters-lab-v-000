@@ -1,8 +1,12 @@
 function City(){
   return function (people, city){
-    return people.filter(function(person){
-      return person.location.city === city;
-    });
+    if (!city) {
+      return people;
+    } else{
+      return people.filter(function(person){
+        return person.location.city === city;
+      });
+    }
   };
 }
 
