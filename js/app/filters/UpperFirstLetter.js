@@ -6,4 +6,4 @@ function UpperFirstLetter() {
  
 angular
     .module('app')
-    .filter('upperFirstLetter', makeUpperCase);
+    .filter('upperFirstLetter', UpperFirstLetter);
