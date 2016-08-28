@@ -8,7 +8,7 @@ describe('UpperFirstLetter Filter', function () {
     }));
 
     it('should make the first letter uppercase', function () {
-        var results = $filter('upperFirstLetter')('word');
+        var results = $filter('UpperFirstLetter')('word');
 
         expect(results).toEqual('Word');
     });
