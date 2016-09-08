@@ -1,4 +1,5 @@
 function ContactController() {
+    this.citySearch = '';
     this.contacts = [
         {
             "name": {
