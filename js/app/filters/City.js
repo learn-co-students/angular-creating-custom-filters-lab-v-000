@@ -3,7 +3,7 @@ function cityFilter() {
 
   return function(contacts,city) {
     return contacts.filter(function(contact) {
-     return contact.city === city
+     return contact.location.city === city
     }
   }
 }
