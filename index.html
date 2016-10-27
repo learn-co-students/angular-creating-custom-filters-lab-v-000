@@ -44,6 +44,8 @@
 
     <div ng-app="app" class="app">
         <div ng-controller="ContactController as ctrl">
+        <label>City:</label>
+        <input type="text" name="city">
             <table>
                 <thead>
                     <tr>
@@ -58,9 +60,9 @@
                 </thead>
                 <tr ng-repeat="contact in ctrl.contacts">
                     <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
-                    <td>{{ contact.name.title}}</td>
-                    <td>{{ contact.name.first}}</td>
-                    <td>{{ contact.name.last}}</td>
+                    <td>{{ contact.name.title | makeUpperCase }}</td>
+                    <td>{{ contact.name.first | makeUpperCase }}</td>
+                    <td>{{ contact.name.last | makeUpperCase }}</td>
                     <td>{{ contact.email }}</td>
                     <td>{{ contact.dob }}</td>
                     <td>{{ contact.phone }}</td>
