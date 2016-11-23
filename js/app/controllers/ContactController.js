@@ -3001,6 +3001,8 @@ function ContactController() {
             }
         }
     ];
+
+    //var filteredContact = upperFirstLetter(this.contacts);
 }
 
 angular
