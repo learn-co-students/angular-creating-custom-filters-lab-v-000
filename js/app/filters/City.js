@@ -1,8 +1,19 @@
 function City() {
 	return function(contactList, city) {
-		return contactList.filter(function(contact) {
-			return contact.location.city === city;
-		});
+
+		if (city === '' || city === undefined) {
+
+			return contactList;
+
+		} else {
+
+			var lowerCaseCity = city.toLowerCase();
+
+			return contactList.filter(function(contact) {
+				return contact.location.city === lowerCaseCity;
+			});
+
+		}
 	};
 }
 

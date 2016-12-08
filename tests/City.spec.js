@@ -11,17 +11,17 @@ describe('City Filter', function () {
        var mockedList = [{
            name: 'Test',
            location: {
-             city: 'Pittsburgh'
+             city: 'Pittsburgh'.toLowerCase()
            }
        }, {
            name: 'Test 2',
            location: {
-             city: 'New York'
+             city: 'New York'.toLowerCase()
            }
        }, {
            name: 'Test 3',
            location: {
-             city: 'Chicago'
+             city: 'Chicago'.toLowerCase()
            }
        }];
 
