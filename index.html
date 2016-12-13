@@ -56,7 +56,7 @@
                         <td>Phone</td>
                     </tr>
                 </thead>
-                <tr ng-repeat="contact in ctrl.contacts | city">
+                <tr ng-repeat="contact in ctrl.contacts | city:'wells'">
                     <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
                     <td>{{ contact.name.title}}</td>
                     <td>{{ contact.name.first | upperFirstLetter }}</td>
