@@ -1,8 +1,8 @@
-function city() {
-  return function(items, city) {
-    // items = ctrl.contacts
+function City() {
+  return function(list, city) {
+    // list = ctrl.contacts
 
-    return items.filter(function(item) {
+    return list.filter(function(item) {
         return item.location.city === city;
     });
   };
@@ -10,4 +10,4 @@ function city() {
 
 angular
   .module('app')
-  .filter('city', city);
+  .filter('city', City);
