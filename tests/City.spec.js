@@ -25,7 +25,7 @@ describe('City Filter', function () {
            }
        }];
 
-        var results = $filter('city')(mockedList, 'Chicago');
+        var results = $filter('City')(mockedList, 'Chicago');
 
         expect(results.length).toBe(1);
         expect(results[0].name).toBe('Test 3');
