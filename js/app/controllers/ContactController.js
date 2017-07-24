@@ -1,4 +1,5 @@
 function ContactController() {
+    this.filter = ""
     this.contacts = [
         {
             "name": {
