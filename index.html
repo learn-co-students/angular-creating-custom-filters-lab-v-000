@@ -43,7 +43,10 @@
 <body>
 
     <div ng-app="app" class="app">
-        <div ng-controller="ContactController as ctrl">
+        <div ng-controller="ContactController as vm">
+            <label>Search by City:</label>
+            <input type="text" name="citySearch" ng-model="vm.citySearch" placeholder="(e.g., dundee, manchester...)">
+
             <table>
                 <thead>
                     <tr>
@@ -56,11 +59,11 @@
                         <td>Phone</td>
                     </tr>
                 </thead>
-                <tr ng-repeat="contact in ctrl.contacts">
+                <tr ng-repeat="contact in vm.contacts | city: vm.citySearch ">
                     <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
-                    <td>{{ contact.name.title}}</td>
-                    <td>{{ contact.name.first}}</td>
-                    <td>{{ contact.name.last}}</td>
+                    <td>{{ contact.name.title | upperFirstLetter }}</td>
+                    <td>{{ contact.name.first | upperFirstLetter }}</td>
+                    <td>{{ contact.name.last | upperFirstLetter }}</td>
                     <td>{{ contact.email }}</td>
                     <td>{{ contact.dob }}</td>
                     <td>{{ contact.phone }}</td>
