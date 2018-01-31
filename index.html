@@ -59,8 +59,8 @@
                 <tr ng-repeat="contact in ctrl.contacts">
                     <td><img ng-src="{{ contact.picture.thumbnail }}" /></td>
                     <td>{{ contact.name.title}}</td>
-                    <td>{{ contact.name.first}}</td>
-                    <td>{{ contact.name.last}}</td>
+                    <td>{{ contact.name.first | UpperFirstLetter}}</td>
+                    <td>{{ contact.name.last | UpperFirstLetter}}</td>
                     <td>{{ contact.email }}</td>
                     <td>{{ contact.dob }}</td>
                     <td>{{ contact.phone }}</td>
